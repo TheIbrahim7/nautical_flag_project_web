@@ -1,0 +1,84 @@
+.containment{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.screen{
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.scrollbox{
+    padding-top: 30px;
+    scroll-behavior: smooth;
+    height: 100%; 
+    text-align: center;
+    min-width: 100vw!important;
+    scroll-snap-align: start;
+}
+
+/* .imageBox{} */
+
+.props h2{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.highlight{
+    margin: 0 auto;
+    /* width: min(90%, 360px); */
+    width: 90%;
+    padding: 2px 10px 10px;
+    background-color: rgba(0,0,0,.1);
+}
+
+.highlight span{
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left!important;
+    display: block;
+    letter-spacing: 1.2px;
+}
+
+.highlight p{
+    text-align: left;
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .8);
+}
+
+.control{
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+
+.control a{
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);;
+    height: 40px;
+    width: 40px;
+    padding: 5px 8px;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+    margin: 8px;
+    text-align: center;
+}
+
+.control a:hover, .control a:focus{
+    background-color: #2948ff;
+    color: #fff;
+    transform: scale(1.2);
+    outline: none;
+}
