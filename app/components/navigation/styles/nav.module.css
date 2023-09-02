@@ -1,0 +1,25 @@
+.nav{
+    padding: 5px 0;
+    /* background-color: red; */
+    width: fit-content;
+    display: flex;
+    align-items: center; 
+}
+
+.back{
+    margin: 0 20px 0 0;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    text-align: center;
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 50%;
+    /* background-color: red; */
+    /* padding: 10px 20x; */
+}
+
+.back:hover, .back:focus{
+    background-color: #fff;
+}

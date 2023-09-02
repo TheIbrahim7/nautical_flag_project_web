@@ -1,10 +1,9 @@
+import FootNote from "./components/footer/footer";
 import ShareApp from "./components/share/share";
 import styles from "./page.module.css";
 
 
 export default function HomePage(){
-
-  let thisYear = new Date().getFullYear();
 
   return <main>
     
@@ -28,8 +27,6 @@ export default function HomePage(){
       </div>
     </section>
 
-  <footer>
-    <p className="tiny"> {thisYear} &copy; ALL RIGHTS RESERVED. This App is Developed & Maintained by <a href="https://www.ioweb.pro">Ibrahim Oduola</a></p>
-  </footer>
+    <FootNote pin={true}/>
   </main>
 }

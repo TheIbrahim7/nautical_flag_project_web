@@ -2,6 +2,8 @@ import { Fragment } from "react";
 import Image from "next/image";
 import { Flags } from "../database/flags";
 import styles from "./page.module.css";
+import Navigation from "../components/navigation/navigation";
+import FootNote from "../components/footer/footer";
 
 
 export default function LearnFlags(){
@@ -19,11 +21,15 @@ export default function LearnFlags(){
       });
     return <main className={styles.containment}>
 
+        <section style={{margin: "10px 25px"}}>
+            <Navigation />
+        </section>
+
         <section className={styles.screen}>
 
             {
                 flags.map((flag, _)=>{
-                    return <section className={styles.scrollbox} key={flag._id}>
+                    return <section id={`${flag.name}`} className={styles.scrollbox} key={flag._id}>
                         <div className={styles.imageBox}>
                             <Image 
                                 src={flag.image}
@@ -34,7 +40,7 @@ export default function LearnFlags(){
                             />
                         </div>
                         <div className={styles.props}>
-                            <h2 id={`${flag.name}`}>{flag.name.substring(0,1)} - {flag.name}</h2>
+                            <h2>{flag.name.substring(0,1)} - {flag.name}</h2>
                             <div className={styles.highlight}>
                                 <span>it means</span>
                                 <p>{flag.meaning[0]}</p>
@@ -56,6 +62,8 @@ export default function LearnFlags(){
             }
 
         </section>
+        
+        <FootNote />
 
     </main>
 }

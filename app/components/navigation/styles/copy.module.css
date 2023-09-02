@@ -1,0 +1,16 @@
+.copyBTN{
+    background-color: rgba(0, 0, 0, .2);
+    outline: none;
+    padding: 3px 5px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .3);
+    border: 2px solid transparent;
+}
+
+.copyBTN:hover, .copyBTN:focus{
+    background-color: #d3d3d8;
+}

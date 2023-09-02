@@ -1,6 +1,4 @@
 .containment{
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -9,21 +7,31 @@
 .screen{
     display: flex;
     flex-direction: row;
-    height: 70vh;
+    min-height: 70vh;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .scrollbox{
     padding-top: 30px;
-    scroll-behavior: smooth;
     height: 100%; 
     text-align: center;
     min-width: 100vw!important;
     scroll-snap-align: start;
 }
 
-/* .imageBox{} */
+.screen::-webkit-scrollbar{
+    background: #2948ff;
+    height: 2px;
+}
+.screen::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, .8);
+}
+
+.imageBox img{
+    width: min(90%, 360px);
+}
 
 .props h2{
     font-size: 40px;
@@ -55,11 +63,11 @@
 }
 
 .control{
-    height: 30vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     padding: 20px 10px;
+    margin: 0 auto;
 }
 
 .control a{
@@ -67,7 +75,7 @@
     box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);;
     height: 40px;
     width: 40px;
-    padding: 5px 8px;
+    padding: 6px;
     font-weight: 900;
     font-size: 20px;
     border-radius: 50%;
