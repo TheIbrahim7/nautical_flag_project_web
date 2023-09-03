@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import './globals.css'
 import { Quicksand } from 'next/font/google';
 import GoogleAnalytics from './google_analytics';
@@ -32,7 +31,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={qs.className}>
-        <GoogleAnalytics />
+        <GoogleAnalytics GA_MEASUREMENT_ID={"G-J2BEKDRXZR"}/>
         {children}
       </body>
     </html>

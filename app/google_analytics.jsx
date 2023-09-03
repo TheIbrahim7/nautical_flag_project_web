@@ -1,37 +1,42 @@
-// app/GoogleAnalytics.jsx
+// components/GoogleAnalytics.tsx
+'use client';
 
-'use client'
+import { usePathname, useSearchParams } from 'next/navigation';
+import Script from 'next/script'
+import { useEffect } from 'react';
+import { pageview } from './lib/helper';
 
-import Script from "next/script"
-import * as gtag from "../gtag.js"
+export default function GoogleAnalytics({GA_MEASUREMENT_ID}){
 
-const GoogleAnalytics = () => {
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
 
-    //You can show in the console the GA_TRACKING_ID to confirm
-    // console.log(gtag.GA_TRACKING_ID)
+    useEffect(()=>{
+        const url = pathname + searchParams.toString();
+        pageview(GA_MEASUREMENT_ID, url);
+
+    }, [pathname, searchParams, GA_MEASUREMENT_ID])
 
     return (
         <>
-            <Script
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-            />
-            <Script
-                id="gtag-init"
-                strategy="afterInteractive"
+            <Script strategy="afterInteractive" 
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}/>
+            <Script id='google-analytics' strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
-                    __html: `
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag(){dataLayer.push(arguments);}
-                      gtag('js', new Date());
-                      gtag('config', '${gtag.GA_TRACKING_ID}', {
-                      page_path: window.location.pathname,
-                      });
-                    `,
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('consent', 'default', {
+                    'analytics_storage': 'accepted'
+                });
+                
+                gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                });
+                `,
                 }}
             />
         </>
-    )
-}
-
-export default GoogleAnalytics
+)}
