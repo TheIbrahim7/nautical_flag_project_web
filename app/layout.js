@@ -3,6 +3,7 @@ import { Quicksand } from 'next/font/google';
 import GoogleAnalytics from './google_analytics';
 import { Suspense } from 'react';
 
+
 const qs = Quicksand({ subsets: ['latin'], display:'swap' })
 
 export const metadata = {
@@ -24,6 +25,12 @@ export const metadata = {
     description: "App for learning, quick-referencing and Quiz: Learn under 25 mins",
     creator: "@ioweb_pro",
     site:"@ioweb_pro",
+  },
+  verification:{
+    google: "GZQq9PcarDV7WP42mmuSzpwMAVynE8zezLb4einE4m4",
+    other:{
+      "msvalidate.01":"05427D50BF02B96A69502C250290E7B8",
+    },
   }
 }
 
@@ -32,8 +39,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={qs.className}>
-        <Suspense>
 
+        <Suspense>
         <GoogleAnalytics GA_MEASUREMENT_ID={"G-J2BEKDRXZR"}/>
         </Suspense>
         {children}
