@@ -29,7 +29,7 @@ export default function GoogleAnalytics({GA_MEASUREMENT_ID}){
                 gtag('js', new Date());
 
                 gtag('consent', 'default', {
-                    'analytics_storage': 'accepted'
+                    'analytics_storage': 'granted'
                 });
                 
                 gtag('config', '${GA_MEASUREMENT_ID}', {

@@ -1,6 +1,7 @@
 import './globals.css'
 import { Quicksand } from 'next/font/google';
 import GoogleAnalytics from './google_analytics';
+import { Suspense } from 'react';
 
 const qs = Quicksand({ subsets: ['latin'], display:'swap' })
 
@@ -31,7 +32,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body className={qs.className}>
+        <Suspense>
+
         <GoogleAnalytics GA_MEASUREMENT_ID={"G-J2BEKDRXZR"}/>
+        </Suspense>
         {children}
       </body>
     </html>
