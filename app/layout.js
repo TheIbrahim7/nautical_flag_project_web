@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import './globals.css'
 import { Quicksand } from 'next/font/google';
 
@@ -28,7 +29,29 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={qs.className}>{children}</body>
+
+{/* Google tag (gtag.js) */}
+      <Script id='google_tag_manager' async={true} src='https://www.googletagmanager.com/gtag/js?id=G-CHM2441TYS' strategy='afterInteractive'>
+        {
+          `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-CHM2441TYS');
+          `
+        }
+
+      </Script>
+
+      <body className={qs.className}>
+        {children}
+        <noscript
+            dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/gtag/js?id=G-CHM2441TYS" height="0" width="0" style="display: none; visibility: hidden;"></iframe>`,
+            }} 
+        />
+      </body>
     </html>
   )
 }
