@@ -6,10 +6,10 @@ import WhatsappIcon from "./icons/whatsapp";
 
 export default function ShareApp(){
     const pretextToShare = "Please Share This For Me!"
-    const url = "https://www.ioweb.pro";
+    const url = "https://www.maritime-flag.vercel.app";
 
     const links = [
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmaritime-flag-app.vercel.app%2F&amp;src=sdkpreparse",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmaritime-flag.vercel.app%2F&amp;src=sdkpreparse",
         //facebook,
         `whatsapp://send?text=${pretextToShare}%0a%0a${url}`,
         "https://twitter.com/intent/tweet?text=" + escape(pretextToShare + "\n\n" + url),
@@ -17,10 +17,10 @@ export default function ShareApp(){
     ]
 
     const icons = [
-        <FacebookIcon />,
-        <WhatsappIcon />,
-        <TwitterIcon />,
-        <MailIcon />,
+        <FacebookIcon key={"1"}/>,
+        <WhatsappIcon key={"2"}/>,
+        <TwitterIcon key={"3"}/>,
+        <MailIcon key={"4"}/>,
 
     ]
     
