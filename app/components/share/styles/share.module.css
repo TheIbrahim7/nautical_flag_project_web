@@ -1,0 +1,7 @@
+.iconic{
+    transition: all .4s ease-in-out;
+}
+
+.iconic:hover,.iconic:focus{
+    transform: scale(1.2);
+}

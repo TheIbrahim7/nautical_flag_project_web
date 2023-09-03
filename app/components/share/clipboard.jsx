@@ -3,9 +3,10 @@
 import { useState } from "react"
 import ClipboardIcon from "./icons/clipboard";
 import CopiedIcon from "./icons/done";
+import styles from "./styles/share.module.css";
 
 
-export default function CopyToClipboard({url="https://www.ioweb.pro"}){
+export default function CopyToClipboard({url="https://maritime-flag.vercel.app"}){
     let [copyPressed, setCopyPressed] = useState(false);
 
     const handleClick = () =>{
@@ -20,5 +21,5 @@ export default function CopyToClipboard({url="https://www.ioweb.pro"}){
             setTimeout(()=>setCopyPressed(false), 4000);
         }).catch(err=>console.log(err))
     }
-    return <button onClick={handleClick} style={{background: "none", border:"none", cursor:"pointer"}}>{copyPressed ? <CopiedIcon /> : <ClipboardIcon /> }</button>
+    return <button className={styles.iconic} onClick={handleClick} style={{background: "none", border:"none", cursor:"pointer"}}>{copyPressed ? <CopiedIcon /> : <ClipboardIcon /> }</button>
 }

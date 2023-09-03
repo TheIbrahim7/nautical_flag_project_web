@@ -3,7 +3,7 @@
 import { useState } from "react";
 import styles from "./styles/copy.module.css";
 
-export default function CopyAppLink({url="https://www.ioweb.pro"}){
+export default function CopyAppLink({url="https://maritime-flag.vercel.app"}){
 
     let [pressed, setPressed] = useState(false);
 

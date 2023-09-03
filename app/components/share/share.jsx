@@ -4,9 +4,11 @@ import MailIcon from "./icons/mail";
 import TwitterIcon from "./icons/twitter";
 import WhatsappIcon from "./icons/whatsapp";
 
+import styles from "./styles/share.module.css";
+
 export default function ShareApp(){
     const pretextToShare = "Please Share This For Me!"
-    const url = "https://www.maritime-flag.vercel.app";
+    const url = "https://maritime-flag.vercel.app";
 
     const links = [
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmaritime-flag.vercel.app%2F&amp;src=sdkpreparse",
@@ -27,7 +29,7 @@ export default function ShareApp(){
     return <>
         {
             [1,2,3,4].map((num,ind)=>{
-                return <a key={num} href={links[ind]}>{icons[ind]}</a>
+                return <a className={styles.iconic} key={num} href={links[ind]}>{icons[ind]}</a>
             })
         }
 

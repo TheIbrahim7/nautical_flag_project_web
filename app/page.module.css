@@ -4,3 +4,13 @@
     flex-direction: column;
     margin: 0 auto;
 }
+
+.specific{
+    padding: 50px 0;
+}
+
+@media only screen and (max-width:464px){
+    .specific{
+        padding: 15px 0;
+    }
+}

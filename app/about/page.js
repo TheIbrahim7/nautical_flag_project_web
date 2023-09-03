@@ -27,9 +27,9 @@ export default function AboutPage(){
                 </div>
                 <h2>Development And Maintenance</h2>
                 <p>
-                    This app, first built in 2020, is developed and maintained by <a href="https://www.ioweb.pro">Ibrahim B. Oduola</a>. <br/><br/>
-                    Ibrahim is a deck officer and tech guru making the best use of both worlds. For suggestions or partnership, please <a href="mailto:ibrahim.oduola007@gmail.com?subject=Message%20About%20The%20Maritime%20Flag%20App&body=Hello!%20My%20name%20is%20...." rel="nofollow">leave me a message!</a>
-                    
+                    This app, first built in 2020, is developed and maintained by <a href="https://www.ioweb.pro">Ibrahim, the tech lead at ioweb</a>. <br/><br/>
+                    Ibrahim is a deck officer and tech guru making the best use of both worlds. With a repertoire spanning coding and artificial intelligence, Ibrahim is exploring opportunities lurking beneath the shipping and logistics industry. But ofcourse, Rome was not built in a day.
+                    For suggestions or partnership, please <a href="mailto:ibrahim.oduola007@gmail.com?subject=Message%20About%20The%20Maritime%20Flag%20App&body=Hello!%20My%20name%20is%20...." rel="nofollow">leave me a message!</a>                    
                 </p>
             </div>
 

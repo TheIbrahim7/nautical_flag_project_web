@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function HomePage(){
 
-  return <main style={{padding: "50px 0"}}>
+  return <main className={styles.specific}>
     
     <div className="board">
       <h1> Welcome to Maritime Signal Flags Learning Platform. Our nautical signal flags app is the perfect way to get started and be a pro in no time</h1>
