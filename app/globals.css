@@ -15,7 +15,7 @@ body {
 }
 
 main{
-  padding: 50px 0;
+  /* padding: 50px 0; */
   background: linear-gradient(#667db6, #0082c8, #0082c8, #667db6);
   /* background: linear-gradient(#56ccf2, #2f80ed); */
   /* background: linear-gradient(#396afc, #2948ff); */
@@ -76,6 +76,7 @@ h1{
   font-size: 12px;
   font-weight: 600;
   padding: 10px 0;
+  line-height: 22px;
 }
 
 .tiny a{
@@ -91,7 +92,7 @@ h1{
 
 footer.pin{
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
 }
 
 footer{
@@ -102,7 +103,7 @@ footer{
 
 footer > nav{
   max-width: 400px;
-  margin: 0 auto;
+  margin: 30px auto 10px;
 }
 
 footer > nav >ul{
@@ -114,7 +115,7 @@ footer > nav >ul{
 
 footer > nav > ul > li >a{
   margin: 5px 10px 0;
-  color: blue;
+  color: rgba(0, 255, 255, .8);
 } 
 footer > nav > ul > li >a:hover, footer > nav > ul > li >a:focus{
   color: #fff;

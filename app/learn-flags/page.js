@@ -21,7 +21,7 @@ export default function LearnFlags(){
       });
     return <main className={styles.containment}>
 
-        <section style={{margin: "10px 25px"}}>
+        <section style={{margin: "10px 15px"}}>
             <Navigation />
         </section>
 

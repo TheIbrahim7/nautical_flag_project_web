@@ -1,20 +1,21 @@
 import FootNote from "./components/footer/footer";
 import ShareApp from "./components/share/share";
+import Special from "./components/special";
 import styles from "./page.module.css";
 
 
 export default function HomePage(){
 
-  return <main>
+  return <main style={{padding: "50px 0"}}>
     
     <div className="board">
-      <h1>Welcome! This is a warm greetings that ease users to use the app</h1>
+      <h1> Welcome to Maritime Signal Flags Learning Platform. Our nautical signal flags app is the perfect way to get started and be a pro in no time</h1>
     </div>
 
     <section className={styles.btnGrp}>
       <a className="buttonUp" href="/learn-flags">Learn Nautical Flags</a>
-      <a className="buttonUp" href="/quiz-flags">Nautical Flags Quiz</a>
-      <a className="buttonUp" href="/about-app">About This App</a>
+      <Special />
+      <a className="buttonUp" href="/about">About This App</a>
       <div>
         <p className="tiny">Share This App</p>
         
@@ -27,6 +28,6 @@ export default function HomePage(){
       </div>
     </section>
 
-    <FootNote pin={true}/>
+    <FootNote pin={false}/>
   </main>
 }
