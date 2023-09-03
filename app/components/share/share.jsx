@@ -7,7 +7,7 @@ import WhatsappIcon from "./icons/whatsapp";
 import styles from "./styles/share.module.css";
 
 export default function ShareApp(){
-    const pretextToShare = "Please Share This For Me!"
+    const pretextToShare = "🔥🔓FREE and FAST: Learn to identify the maritime signal flags 🚩 the letters & meaning with quizes"
     const url = "https://maritime-flag.vercel.app";
 
     const links = [
