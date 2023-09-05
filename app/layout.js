@@ -51,7 +51,8 @@ export default function RootLayout({ children }) {
     logo:"https://maritime-flag.vercel.app/icon-256x256.png",
     "offers": {
       "@type": "Offer",
-      "price": "0"
+      "price": "0",
+      "priceCurrency": "USD",
     },
     "publisher": {
       "@type": "Organization",
