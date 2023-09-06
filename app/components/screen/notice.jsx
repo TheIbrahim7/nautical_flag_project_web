@@ -26,8 +26,8 @@ export default function InstallationNotice(){
         reference.current.classList.remove("overScreenActive");
     };
 
-    const downloadApp = function(){
-        deactivateDownloadPrompt();
+    const downloadApp = function(ovs){
+        deactivateDownloadPrompt(ovs);
         defferedPrompt.prompt();
         // defferedPrompt.userChoice.then((choice)=>{
         //     if(choice.outcome === 'accepted'){
@@ -82,7 +82,7 @@ export default function InstallationNotice(){
 
                 <p>So what do you say?</p>
 
-                <button onClick={downloadApp} > {downloadIcon} Install</button>
+                <button onClick={()=>downloadApp(overscreen)} > {downloadIcon} Install</button>
 
             </div>
 
