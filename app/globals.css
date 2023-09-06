@@ -135,3 +135,11 @@ footer > nav > ul > li >a:hover, footer > nav > ul > li >a:focus{
     color-scheme: dark;
   }
 } */
+
+
+.overScreenActive{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

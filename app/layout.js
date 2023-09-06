@@ -2,6 +2,7 @@ import './globals.css'
 import { Quicksand } from 'next/font/google';
 import GoogleAnalytics from './google_analytics';
 import { Suspense } from 'react';
+import InstallationNotice from './components/screen/notice';
 
 
 const qs = Quicksand({ subsets: ['latin'], display:'swap' })
@@ -75,18 +76,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       
-      {/* Add JSON-LD to your page */}
-      <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+      
 
       <body className={qs.className}>
+        {/* Add JSON-LD to your page */}
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
 
         <Suspense>
-        <GoogleAnalytics GA_MEASUREMENT_ID={"G-J2BEKDRXZR"}/>
+          <GoogleAnalytics GA_MEASUREMENT_ID={"G-J2BEKDRXZR"}/>
         </Suspense>
+
+
         {children}
+        
+        <InstallationNotice />
+        
       </body>
     </html>
   )

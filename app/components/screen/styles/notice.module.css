@@ -1,0 +1,133 @@
+.pageAlert{
+    position: fixed;
+    transition: all .4s ease-in-out;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(#667db6, #0082c8, #0082c8, #667db6);
+}
+
+.closer{
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    opacity: .6;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.closer:hover, .closer:focus{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.closer:hover svg, .closer:focus svg{
+    fill: #fa0707;
+}
+
+.content{
+    margin: 100px auto;
+    width: 80%;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:470px){
+    .content{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:370px){
+    .content{
+        width: 94%;
+    }
+}
+
+.headline{
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    margin: 30px 0;
+    
+}
+
+.subs p{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    /* opacity: .8; */
+}
+
+.subs li{
+    color: #c1cfee;
+    background: url(../success.png) no-repeat left top;
+    margin: 0;
+    font-weight: 600;
+    list-style: none;
+    padding: 3px 0 3px 40px;
+    font-size: 16px;
+    background-position: left 4px;
+    
+    /* list-style: none; */
+}
+
+.thumbside{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.thumbside p{
+    padding: 10px 0 15px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+
+.thumbside button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(520px, 100%);
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #0082c8;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    transition: all .4s ease-in-out;
+    box-shadow: 2px 1px 3px 1px rgba(0, 0, 0, .4);
+}
+
+.thumbside svg{
+    width: 20px;
+    height: 20px;
+    margin: 0 20px 0 0;
+}
+
+.thumbside path{
+    transition: color .4s ease-in-out;
+}
+
+.thumbside:hover svg path, .thumbside:focus svg path{
+    fill: #fff;
+}
+
+.thumbside button:hover, .thumbside button:focus{
+    background: #0082c8;
+    color: #fff;
+    transform: scale(1.2);
+}
